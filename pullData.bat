@@ -33,17 +33,6 @@ for /L %%H in (0,1,23) do (
                 rem echo aws s3 cp !awsDataPath! %myPath% --endpoint-url %myEndPoint%
                 aws s3 cp !awsDataPath! %myPath% --endpoint-url %myEndPoint%
             )
-
-            
-            rem Pause for 5 seconds, suppressing the timeout countdown
-            rem timeout /t 5 /nobreak >nul
         )
     )
 )
-rem Example AWS CLI command to list directories of adsbexchange.com sample data, using the default profile and configureation above
-rem aws s3 ls s3://adsbx-sample-data/readsb-hist/  --endpoint-url https://6ff2cd7dae70306649e2c1e1500e2e0a.r2.cloudflarestorage.com
-
-rem aws s3 cp s3://adsbx-sample-data/readsb-hist/2025/01/01/000005Z.json.gz .\test_data --endpoint-url https://6ff2cd7dae70306649e2c1e1500e2e0a.r2.cloudflarestorage.com
-
-
-
